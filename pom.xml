@@ -15,27 +15,27 @@
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-	<groupId>com.softserveinc</groupId>
-	<artifactId>geo-citizen</artifactId>
-	<version>1.0.5-SNAPSHOT</version>
+    <groupId>com.softserveinc</groupId>
+    <artifactId>geo-citizen</artifactId>
+    <version>1.0.5-SNAPSHOT</version>
     <packaging>war</packaging>
 
-	<name>Geo Citizen</name>
-	<description>Demo project named as "Geo Citizen" for Soft Serve by Ch-58 group.</description>
+    <name>Geo Citizen</name>
+    <description>Demo project named as "Geo Citizen" for Soft Serve by Ch-58 group.</description>
 
     <properties>
         <project.fileName>citizen</project.fileName>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-	    <java.version>8</java.version>
-	    <springframework.version>4.3.13.RELEASE</springframework.version>
-	    <springframework.data-jpa.version>1.11.9.RELEASE</springframework.data-jpa.version>
-	    <springframework.security.version>4.2.3.RELEASE</springframework.security.version>
+        <java.version>8</java.version>
+        <springframework.version>4.3.13.RELEASE</springframework.version>
+        <springframework.data-jpa.version>1.11.9.RELEASE</springframework.data-jpa.version>
+        <springframework.security.version>4.2.3.RELEASE</springframework.security.version>
         <springframework.security.jwt.version>1.0.8.RELEASE</springframework.security.jwt.version>
         <springframework.security.oauth2.version>2.2.1.RELEASE</springframework.security.oauth2.version>
-	    <springframework.social.version>1.1.4.RELEASE</springframework.social.version>
-	    <springframework.social.facebook.version>3.0.0.M3</springframework.social.facebook.version>
-	    <springframework.social.google.version>1.0.0.RELEASE</springframework.social.google.version>
+        <springframework.social.version>1.1.4.RELEASE</springframework.social.version>
+        <springframework.social.facebook.version>3.0.0.M3</springframework.social.facebook.version>
+        <springframework.social.google.version>1.0.0.RELEASE</springframework.social.google.version>
         <jjwt.version>0.9.0</jjwt.version>
         <hibernate.version>5.2.12.Final</hibernate.version>
         <hibernate.validator.version>6.0.6.Final</hibernate.validator.version>
@@ -45,9 +45,9 @@
         <slf4j.version>1.7.25</slf4j.version>
         <logback.version>1.2.3</logback.version>
         <liquibase.version>3.5.3</liquibase.version>
-	    <mapstruct.version>1.2.0.Final</mapstruct.version>
-	    <javax.validation.version>2.0.1.Final</javax.validation.version>
-	    <guava.version>23.6-jre</guava.version>
+        <mapstruct.version>1.2.0.Final</mapstruct.version>
+        <javax.validation.version>2.0.1.Final</javax.validation.version>
+        <guava.version>23.6-jre</guava.version>
         <javax.annotation.version>1.3.1</javax.annotation.version>
         <jaxb-api.version>2.3.0</jaxb-api.version>
         <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
@@ -57,9 +57,9 @@
         <dbunit.version>2.5.4</dbunit.version>
         <springtestdbunit.veriosn>1.3.0</springtestdbunit.veriosn>
         <assertj.version>3.8.0</assertj.version>
-	    <javax.mail.version>1.6.0</javax.mail.version>
-	    <apache.commons.lang>3.7</apache.commons.lang>
-	    <apache.commons.collections>4.1</apache.commons.collections>
+        <javax.mail.version>1.6.0</javax.mail.version>
+        <apache.commons.lang>3.7</apache.commons.lang>
+        <apache.commons.collections>4.1</apache.commons.collections>
         <apache.commons.io>2.6</apache.commons.io>
         <swagger.version>2.7.0</swagger.version>
     </properties>
@@ -97,12 +97,12 @@
             <scope>test</scope>
         </dependency>
 
-	    <dependency>
-		    <groupId>org.springframework</groupId>
-		    <artifactId>spring-context-support</artifactId>
-		    <version>${springframework.version}</version>
-	    </dependency>
-	    <!--Spring MVC-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+            <version>${springframework.version}</version>
+        </dependency>
+        <!--Spring MVC-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
@@ -187,8 +187,8 @@
             <version>${postgresql.connector.version}</version>
         </dependency>
 
-	<dependency>
-    	    <groupId>org.postgresql</groupId>
+        <dependency>
+            <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <version>42.2.5</version>
         </dependency>
@@ -213,11 +213,11 @@
             <version>${jackson.version}</version>
         </dependency>
 
-	    <dependency>
-		    <groupId>com.fasterxml.jackson.core</groupId>
-		    <artifactId>jackson-annotations</artifactId>
-		    <version>${jackson.version}</version>
-	    </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
 
         <dependency>
             <groupId>com.fasterxml.jackson.datatype</groupId>
@@ -230,39 +230,39 @@
         <dependency>
             <groupId>org.springframework.social</groupId>
             <artifactId>spring-social-core</artifactId>
-	        <version>${springframework.social.version}</version>
+            <version>${springframework.social.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.social</groupId>
             <artifactId>spring-social-web</artifactId>
-	        <version>${springframework.social.version}</version>
+            <version>${springframework.social.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.social</groupId>
             <artifactId>spring-social-config</artifactId>
-	        <version>${springframework.social.version}</version>
+            <version>${springframework.social.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.social</groupId>
             <artifactId>spring-social-security</artifactId>
-	        <version>${springframework.social.version}</version>
+            <version>${springframework.social.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.social</groupId>
             <artifactId>spring-social-facebook</artifactId>
-	        <version>${springframework.social.facebook.version}</version>
+            <version>${springframework.social.facebook.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.social</groupId>
             <artifactId>spring-social-google</artifactId>
-	        <version>${springframework.social.google.version}</version>
+            <version>${springframework.social.google.version}</version>
         </dependency>
-	    <!--Logback-->
+        <!--Logback-->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
@@ -272,7 +272,7 @@
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-	        <version>${logback.version}</version>
+            <version>${logback.version}</version>
         </dependency>
 
         <dependency>
@@ -292,32 +292,32 @@
             <artifactId>liquibase-maven-plugin</artifactId>
             <version>${liquibase.version}</version>
         </dependency>
-	    <!--MapStruct-->
-	    <dependency>
-		    <groupId>org.mapstruct</groupId>
-		    <artifactId>mapstruct-jdk8</artifactId>
-		    <version>${mapstruct.version}</version>
-	    </dependency>
+        <!--MapStruct-->
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct-jdk8</artifactId>
+            <version>${mapstruct.version}</version>
+        </dependency>
 
-	    <dependency>
-		    <groupId>org.mapstruct</groupId>
-		    <artifactId>mapstruct-processor</artifactId>
-		    <version>${mapstruct.version}</version>
-		    <optional>true</optional>
-	    </dependency>
-	    <!--Javax validation-->
-	    <dependency>
-		    <groupId>javax.validation</groupId>
-		    <artifactId>validation-api</artifactId>
-		    <version>${javax.validation.version}</version>
-	    </dependency>
-	    <!--Guava-->
-	    <dependency>
-		    <groupId>com.google.guava</groupId>
-		    <artifactId>guava</artifactId>
-		    <version>${guava.version}</version>
-	    </dependency>
-	    <!--JDK9 bikes-->
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct-processor</artifactId>
+            <version>${mapstruct.version}</version>
+            <optional>true</optional>
+        </dependency>
+        <!--Javax validation-->
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>${javax.validation.version}</version>
+        </dependency>
+        <!--Guava-->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
+        </dependency>
+        <!--JDK9 bikes-->
         <dependency>
             <groupId>javax.annotation</groupId>
             <artifactId>javax.annotation-api</artifactId>
@@ -369,35 +369,35 @@
             <scope>test</scope>
         </dependency>
         <!--Some tools-->
-	    <dependency>
-		    <groupId>javax.mail</groupId>
-		    <artifactId>javax.mail-api</artifactId>
-		    <version>${javax.mail.version}</version>
-	    </dependency>
-
-	    <dependency>
-		    <groupId>com.sun.mail</groupId>
-		    <artifactId>javax.mail</artifactId>
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>javax.mail-api</artifactId>
             <version>${javax.mail.version}</version>
-	    </dependency>
+        </dependency>
 
-	    <dependency>
-		    <groupId>com.sun.mail</groupId>
-		    <artifactId>smtp</artifactId>
-		    <version>${javax.mail.version}</version>
-	    </dependency>
+        <dependency>
+            <groupId>com.sun.mail</groupId>
+            <artifactId>javax.mail</artifactId>
+            <version>${javax.mail.version}</version>
+        </dependency>
 
-	    <dependency>
-		    <groupId>org.apache.commons</groupId>
-		    <artifactId>commons-lang3</artifactId>
-		    <version>${apache.commons.lang}</version>
-	    </dependency>
+        <dependency>
+            <groupId>com.sun.mail</groupId>
+            <artifactId>smtp</artifactId>
+            <version>${javax.mail.version}</version>
+        </dependency>
 
-	    <dependency>
-		    <groupId>org.apache.commons</groupId>
-		    <artifactId>commons-collections4</artifactId>
-		    <version>${apache.commons.collections}</version>
-	    </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${apache.commons.lang}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+            <version>${apache.commons.collections}</version>
+        </dependency>
 
         <dependency>
             <groupId>commons-io</groupId>
@@ -425,7 +425,7 @@
             <scope>test</scope>
         </dependency>
 
-	    <dependency>
+        <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>${junit.version}</version>
@@ -438,27 +438,27 @@
             </exclusions>
         </dependency>
 
-	    <dependency>
+        <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
             <version>1.9.5</version>
             <scope>test</scope>
         </dependency>
 
-	    <dependency>
+        <dependency>
             <groupId>com.jayway.jsonpath</groupId>
             <artifactId>json-path</artifactId>
             <version>2.4.0</version>
         </dependency>
 
-	    <dependency>
+        <dependency>
             <groupId>com.jayway.jsonpath</groupId>
             <artifactId>json-path-assert</artifactId>
             <version>2.4.0</version>
             <scope>test</scope>
         </dependency>
 
-	    <dependency>
+        <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <version>1.4.196</version>
@@ -495,28 +495,28 @@
     <build>
         <finalName>${project.fileName}</finalName>
         <plugins>
-	        <plugin>
-		        <groupId>org.apache.maven.plugins</groupId>
-		        <artifactId>maven-war-plugin</artifactId>
-		        <configuration>
-			        <failOnMissingWebXml>false</failOnMissingWebXml>
-		        </configuration>
-	        </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
 
-	        <plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${maven-compiler-plugin.version}</version>
                 <configuration>
                     <source>1.${java.version}</source>
                     <target>1.${java.version}</target>
-	                <annotationProcessorPaths>
-		                <path>
-			                <groupId>org.mapstruct</groupId>
-			                <artifactId>mapstruct-processor</artifactId>
-			                <version>${mapstruct.version}</version>
-		                </path>
-	                </annotationProcessorPaths>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.mapstruct</groupId>
+                            <artifactId>mapstruct-processor</artifactId>
+                            <version>${mapstruct.version}</version>
+                        </path>
+                    </annotationProcessorPaths>
                 </configuration>
             </plugin>
 
@@ -584,7 +584,7 @@
         <repository>
             <id>org.springframework.maven.milestone</id>
             <name>Spring Maven Milestone Repository</name>
-            <url>http://repo.spring.io/milestone</url>
+            <url>https://repo.spring.io/milestone</url>
         </repository>
         <repository>
             <id>public</id>
@@ -615,17 +615,17 @@
             <name>Spring Maven MILESTONE Repository</name>
             <url>http://repo.spring.io/libs-milestone</url>
         </repository>
-</repositories>
-<distributionManagement>
-    <repository>
-      <id>nexus</id>
-      <name>Releases</name>
-      <url>http://35.188.29.52:8081/repository/maven-releases</url>
-    </repository>
-    <snapshotRepository>
-      <id>nexus</id>
-      <name>Snapshot</name>
-      <url>http://35.188.29.52:8081/repository/maven-snapshots</url>
-    </snapshotRepository>
-  </distributionManagement>
+    </repositories>
+    <distributionManagement>
+        <repository>
+            <id>nexus</id>
+            <name>Releases</name>
+            <url>http://35.188.29.52:8081/repository/maven-releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus</id>
+            <name>Snapshot</name>
+            <url>http://35.188.29.52:8081/repository/maven-snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
