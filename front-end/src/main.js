@@ -23,7 +23,7 @@ import Header from '@/components/header/Header'
 import router from './router'
 import i18n from './i18n'
 
-export const backEndUrl = 'http://localhost:8080/citizen/'
+export const backEndUrl = 'http://51.138.200.208:8080/citizen/'
 
 Vue.use(VueResource)
 Vue.use(VueCookie)
