@@ -20,10 +20,10 @@ module.exports = {
   test_settings: {
     default: {
       selenium_port: 4444,
-      selenium_host: '192.168.0.190',
+      selenium_host: '192.168.0.41',
       silent: true,
       globals: {
-        devServerURL: 'http://192.168.0.190:' + (process.env.PORT || config.dev.port)
+        devServerURL: 'http://192.168.0.41:' + (process.env.PORT || config.dev.port)
       }
     },
 
