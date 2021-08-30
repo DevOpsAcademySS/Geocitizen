@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # ch-058, geocitizen
 
 ___build and deploy (ubuntu16, git2, maven3, tomcat9)___
@@ -33,4 +32,3 @@ to generate the production build you have to
 
 =======
 # Geocitizen
->>>>>>> a3175f1c0fdab76be1cea3be0ec00b86a68e345b

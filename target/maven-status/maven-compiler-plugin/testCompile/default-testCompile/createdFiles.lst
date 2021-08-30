@@ -1,0 +1,15 @@
+com/softserveinc/geocitizen/controller/AuthRestControllerTest.class
+com/softserveinc/geocitizen/repository/RecoveryTokenRepositoryTest.class
+com/softserveinc/geocitizen/service/NotificationServiceTest.class
+com/softserveinc/geocitizen/repository/IssueRepositoryTest.class
+com/softserveinc/geocitizen/service/MapMarkerServiceTest.class
+com/softserveinc/geocitizen/repository/NotificationRepositoryTest.class
+com/softserveinc/geocitizen/repository/ImagesRepositoryTest.class
+com/softserveinc/geocitizen/service/UserServiceTest.class
+com/softserveinc/geocitizen/repository/ConnectionRepositoryTest.class
+com/softserveinc/geocitizen/controller/UsersRestControllerTest.class
+com/softserveinc/geocitizen/repository/MessageRepositoryTest.class
+com/softserveinc/geocitizen/repository/UsersRepositoryTest.class
+com/softserveinc/geocitizen/service/MessageServiceTest.class
+com/softserveinc/geocitizen/controller/MapRestControllerTest.class
+com/softserveinc/geocitizen/repository/MapMarkersRepositoryTest.class
