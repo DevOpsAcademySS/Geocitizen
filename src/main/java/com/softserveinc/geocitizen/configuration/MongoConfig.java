@@ -17,7 +17,7 @@ public class MongoConfig {
 
 	@Bean
 	public MongoDbFactory mongoDbFactory() throws Exception {
-		return new SimpleMongoDbFactory(new MongoClient("localhost", 27017), "ss_demo_chat");
+		return new SimpleMongoDbFactory(new MongoClient("192.168.0.141", 27017), "ss_demo_chat");
 	}
 
 	@Bean
