@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # ch-058, geocitizen
 
 ___build and deploy (ubuntu16, git2, maven3, tomcat9)___
@@ -24,13 +23,14 @@ to generate the production build you have to
     * after [`<script type=text/javascript src=`](https://git.io/vARr5)          
 - then repeat 3rd step of `build and deploy`  
 
+### diagram as code 1
+![diagram_as_code_1](diagram_as_code_1.png)
+### diagram as code 2
+![diagram_as_code_2](diagram_as_code_2.png)
 # 
     
 [swagger](http://localhost:8080/citizen/swagger-ui.html)
 
 [heroku](https://geocitizen.herokuapp.com)  
-  
 
-=======
 # Geocitizen
->>>>>>> a3175f1c0fdab76be1cea3be0ec00b86a68e345b
