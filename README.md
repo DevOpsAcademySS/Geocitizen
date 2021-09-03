@@ -423,9 +423,13 @@ In ***'front-end'*** directory do `npm install`. In my case I had errors, so I c
 If every dependencies are downloaded do `npm run build`.
 
 After build copy everything in ***'front-end/dist'*** to ***'src/main/webapp'*** and in ***'/src/main/webapp/index.html'***_(not in ***'front-end'***, but in forlder there we copied it to)_ put dots on lines:
+
 Aafter `<link href=`
+
 Aafter `<script type=text/javascript src=`
+
 Now do `mvn install`.
+
 Aafter that do `mv target/citizen.war /usr/share/tomcat9/webapps/`  _(tomcat folder could be this ***'/var/lib/tomcat/'***)_.
 
 35. Now you can start tomcat service : `sudo systemctl <start/restart> tomcat`
