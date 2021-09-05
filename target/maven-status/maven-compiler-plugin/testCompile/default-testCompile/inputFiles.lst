@@ -1,0 +1,15 @@
+/home/kbob/Geocitizen/src/test/java/com/softserveinc/geocitizen/service/MessageServiceTest.java
+/home/kbob/Geocitizen/src/test/java/com/softserveinc/geocitizen/repository/ConnectionRepositoryTest.java
+/home/kbob/Geocitizen/src/test/java/com/softserveinc/geocitizen/repository/MapMarkersRepositoryTest.java
+/home/kbob/Geocitizen/src/test/java/com/softserveinc/geocitizen/repository/MessageRepositoryTest.java
+/home/kbob/Geocitizen/src/test/java/com/softserveinc/geocitizen/service/MapMarkerServiceTest.java
+/home/kbob/Geocitizen/src/test/java/com/softserveinc/geocitizen/repository/IssueRepositoryTest.java
+/home/kbob/Geocitizen/src/test/java/com/softserveinc/geocitizen/controller/UsersRestControllerTest.java
+/home/kbob/Geocitizen/src/test/java/com/softserveinc/geocitizen/repository/UsersRepositoryTest.java
+/home/kbob/Geocitizen/src/test/java/com/softserveinc/geocitizen/service/NotificationServiceTest.java
+/home/kbob/Geocitizen/src/test/java/com/softserveinc/geocitizen/repository/ImagesRepositoryTest.java
+/home/kbob/Geocitizen/src/test/java/com/softserveinc/geocitizen/repository/RecoveryTokenRepositoryTest.java
+/home/kbob/Geocitizen/src/test/java/com/softserveinc/geocitizen/repository/NotificationRepositoryTest.java
+/home/kbob/Geocitizen/src/test/java/com/softserveinc/geocitizen/controller/MapRestControllerTest.java
+/home/kbob/Geocitizen/src/test/java/com/softserveinc/geocitizen/controller/AuthRestControllerTest.java
+/home/kbob/Geocitizen/src/test/java/com/softserveinc/geocitizen/service/UserServiceTest.java
