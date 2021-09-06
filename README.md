@@ -1,36 +1,57 @@
-<<<<<<< HEAD
-# ch-058, geocitizen
-
-___build and deploy (ubuntu16, git2, maven3, tomcat9)___
-
-1) `git clone https://github.com/nromanen/Ch-058.git; cd Ch-058`
-1) in config file [`~/Ch-058/src/main/resources/application.properties`](https://git.io/vA4Sw)
-	you might want to edit following properties
-	 * [`front.url`](https://git.io/vARyB) - front url
-	 * [`db.url`](https://git.io/vARyu) - db uri (__db must be created manually__)
-	 * [`db.username`](https://git.io/vARyo) & [`db.password`](https://git.io/vARyK) - db credentials
-1) `mvn install && mv target/citizen.war /usr/share/tomcat9/webapps/ && /usr/share/tomcat9/bin/startup.sh`
-1) e.g. <http://localhost:8080/citizen/>
-
-# 
-
-if you want to make changes to frontend 
-you have to cd to `~/Ch-058/front-end` dir and run `npm run dev` after successful execution you'll see url.
-to generate the production build you have to
- - replace url with tomcat's url (e.g. `'http://localhost:8080/citizen'`) in [`~/Ch-058/front-end/src/main.js`](git.io/vA49U)
- - run `npm run build`, move all files from `~/Ch-058/front-end/dist` to `~/Ch-058/src/main/webapp`
- - in [`~/Ch-058/src/main/webapp/index.html`](https://git.io/vAR9l) put dots (ha-ha) on lines
-    * after [`<link href=`](https://git.io/vARrw) 
-    * after [`<script type=text/javascript src=`](https://git.io/vARr5)          
-- then repeat 3rd step of `build and deploy`  
-
-# 
-    
-[swagger](http://localhost:8080/citizen/swagger-ui.html)
-
-[heroku](https://geocitizen.herokuapp.com)  
-  
-
-=======
 # Geocitizen
->>>>>>> a3175f1c0fdab76be1cea3be0ec00b86a68e345b
+
+build and deploy (ubuntuserver, centos7, git, java11, maven3, tomcat9, postgresql11)
+___
+## Configuration of virtual machines
+All links bellow i used to configure my virtual machines: Ubuntu Server with PostgreSQL database and CentOS 7 to deploy Geocitizen.
+
+[Installing Tomcat on CentOS](https://www.digitalocean.com/community/tutorials/how-to-install-apache-tomcat-8-on-centos-7)
+
+[Installing Maven on CentOS](https://linuxize.com/post/how-to-install-apache-maven-on-centos-7/)
+
+[Java on CentOS](https://phoenixnap.com/kb/install-java-on-centos)
+
+[NodeJS](https://linuxize.com/post/how-to-install-node-js-on-centos-7/)
+
+[Install and configure PostgreSQL](https://winitpro.ru/index.php/2019/09/26/ustanovka-postgresql-db-centos/)
+___
+## Manual deploy of Geocitizen
+
+1) `git clone https://github.com/DevOpsAcademySS/Geocitizen.git`
+2) Configure and build front-end:
+	- change [`localhost`](https://github.com/DevOpsAcademySS/Geocitizen/blob/b17414654293ec4f8c9d2509aa5d7c9c72080089/front-end/src/main.js#L26) in [`~/Geocitizen/front-end/src/main.js`](front-end/src/main.js) to VM's IP.
+	- change directory to `~/Geocitizen/front-end/` and run `npm install`. In my case, I had [errors](), so I changed versions of these packages in [`package.json`](front-end/package.json) : 
+	`"vue-material": "^1.0.0-beta-7"` to `"vue-material": "1.0.0-beta-8"` and `"vue-router": "^3.0.1"` to `"vue-router": "3.0.1"`. Now `nmp install` should be successfull.
+	- run `npm audit fix` if needed
+	- after successfull `npm install` run `npm run build`
+	- after build copy everything from `~/Geocitizen/front-end/dist/` to `~/Geocitizen/src/main/webapp/`, and in [`~/Geocitizen/src/main/webapp/index.html`](src/main/webapp/index.html)(not in front-end, but in forlder there we copied it to) put dots in lines:
+		```
+			after <link href=
+
+			after <script type=text/javascript src=
+		```	
+3) in config file [`~/Geocitizen/src/main/resources/application.properties`](src/main/resources/application.properties)
+	you need to edit following properties:
+	 * [`front.url`](https://github.com/DevOpsAcademySS/Geocitizen/blob/b17414654293ec4f8c9d2509aa5d7c9c72080089/src/main/resources/application.properties#L2) - front url
+	 * [`front-end.url`](https://github.com/DevOpsAcademySS/Geocitizen/blob/b17414654293ec4f8c9d2509aa5d7c9c72080089/src/main/resources/application.properties#L3) - front-end url
+	 * [`db.url`](https://github.com/DevOpsAcademySS/Geocitizen/blob/b17414654293ec4f8c9d2509aa5d7c9c72080089/src/main/resources/application.properties#L6) - db url (__db must be created manually__)
+	 * [`db.username`](https://github.com/DevOpsAcademySS/Geocitizen/blob/b17414654293ec4f8c9d2509aa5d7c9c72080089/src/main/resources/application.properties#L7) & [`db.password`](https://github.com/DevOpsAcademySS/Geocitizen/blob/b17414654293ec4f8c9d2509aa5d7c9c72080089/src/main/resources/application.properties#L8) - db credentials
+4) Edit [`pom.xml`](pom.xml) file, change port from http to https in this line:[`<url>http://repo.spring.io/milestone</url>`](https://github.com/DevOpsAcademySS/Geocitizen/blob/b17414654293ec4f8c9d2509aa5d7c9c72080089/pom.xml#L587)
+5) `mvn install` in `~/Geocitizen/`
+6) `mv target/citizen.war /opt/tomcat/webapps/` (instead of `/opt/tomcat/` path to tomcat home directory can be different e.g., `/usr/share/tomcat9/` or `/var/lib/tomcat`)
+7) restart tomcat service `systemctl restart tomcat`
+8) go to http://< IP of your VM >:8080 
+___
+## [**Results**](https://imgur.com/a/7RSJC7K)
+___
+## Errors
+* `vue-material` error:
+	![image](https://imgur.com/9qfcdrx.png)
+* `vue-router` error(no "Login" buttin):
+	![image](https://i.imgur.com/b6YVdpF.png)
+	![image](https://i.imgur.com/CG9lNvq.png)
+	<p align=center>Google Chrome</p>
+
+	![image](https://i.imgur.com/Kjo0pKn.png)
+
+	<p align=center>Mozilla Firefox</p>
