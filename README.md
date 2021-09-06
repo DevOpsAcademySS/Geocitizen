@@ -42,7 +42,12 @@ ___
 5) `mvn install` in `~/Geocitizen/`
 6) `mv target/citizen.war /opt/tomcat/webapps/` (instead of `/opt/tomcat/` path to tomcat home directory can be different e.g., `/usr/share/tomcat9/` or `/var/lib/tomcat`)
 7) restart tomcat service `systemctl restart tomcat`
-8) go to http://< IP of your VM >:8080 
+8) open port 8080:
+
+	`sudo firewall-cmd --zone=public --permanent --add-port=8080/tcp`
+	
+	`sudo firewall-cmd --reload`
+9) go to http://< IP of your VM >:8080 
 ___
 ## [**Results**](https://imgur.com/a/7RSJC7K)
 ___
