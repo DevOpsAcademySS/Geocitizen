@@ -48,7 +48,8 @@ ___
 * `vue-material` error:
 	![image](https://imgur.com/9qfcdrx.png)
 	
-* `vue-router` error(no "Login" buttin):
+* `vue-router` error(no "Login" button):
+
 	![image](https://i.imgur.com/b6YVdpF.png)
 	![image](https://i.imgur.com/CG9lNvq.png)
 	<p>Google Chrome</p>
