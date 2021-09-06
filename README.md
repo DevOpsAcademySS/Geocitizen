@@ -1,6 +1,7 @@
 # Geocitizen
 
 build and deploy (ubuntuserver, centos7, git, java11, maven3, tomcat9, postgresql11)
+by Mykola Kozak
 ___
 ## Configuration of virtual machines
 All links bellow i used to configure my virtual machines: Ubuntu Server with PostgreSQL database and CentOS 7 to deploy Geocitizen.
