@@ -20,7 +20,7 @@ ___
 1) `git clone https://github.com/DevOpsAcademySS/Geocitizen.git`
 2) Configure and build front-end:
 	- change [`localhost`](https://github.com/DevOpsAcademySS/Geocitizen/blob/b17414654293ec4f8c9d2509aa5d7c9c72080089/front-end/src/main.js#L26) in [`~/Geocitizen/front-end/src/main.js`](front-end/src/main.js) to VM's IP.
-	- change directory to `~/Geocitizen/front-end/` and run `npm install`. In my case, I had [errors](), so I changed versions of these packages in [`package.json`](front-end/package.json) : 
+	- change directory to `~/Geocitizen/front-end/` and run `npm install`. In my case, I had [errors](https://github.com/DevOpsAcademySS/Geocitizen/tree/IA-135-mykola-manual-deploy-geocitizen#errors), so I changed versions of these packages in [`package.json`](front-end/package.json) : 
 	`"vue-material": "^1.0.0-beta-7"` to `"vue-material": "1.0.0-beta-8"` and `"vue-router": "^3.0.1"` to `"vue-router": "3.0.1"`. Now `nmp install` should be successfull.
 	- run `npm audit fix` if needed
 	- after successfull `npm install` run `npm run build`
@@ -47,11 +47,12 @@ ___
 ## Errors
 * `vue-material` error:
 	![image](https://imgur.com/9qfcdrx.png)
+	
 * `vue-router` error(no "Login" buttin):
 	![image](https://i.imgur.com/b6YVdpF.png)
 	![image](https://i.imgur.com/CG9lNvq.png)
-	<p align=center>Google Chrome</p>
+	<p>Google Chrome</p>
 
 	![image](https://i.imgur.com/Kjo0pKn.png)
 
-	<p align=center>Mozilla Firefox</p>
+	<p>Mozilla Firefox</p>
