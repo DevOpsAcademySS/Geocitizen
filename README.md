@@ -1,36 +1,48 @@
-# ch-058, geocitizen
-
-___build and deploy (ubuntu16, git2, maven3, tomcat9)___
-
-1) `git clone https://github.com/nromanen/Ch-058.git; cd Ch-058`
-1) in config file [`~/Ch-058/src/main/resources/application.properties`](https://git.io/vA4Sw)
-	you might want to edit following properties
-	 * [`front.url`](https://git.io/vARyB) - front url
-	 * [`db.url`](https://git.io/vARyu) - db uri (__db must be created manually__)
-	 * [`db.username`](https://git.io/vARyo) & [`db.password`](https://git.io/vARyK) - db credentials
-1) `mvn install && mv target/citizen.war /usr/share/tomcat9/webapps/ && /usr/share/tomcat9/bin/startup.sh`
-1) e.g. <http://localhost:8080/citizen/>
-
-# 
-
-if you want to make changes to frontend 
-you have to cd to `~/Ch-058/front-end` dir and run `npm run dev` after successful execution you'll see url.
-to generate the production build you have to
- - replace url with tomcat's url (e.g. `'http://localhost:8080/citizen'`) in [`~/Ch-058/front-end/src/main.js`](git.io/vA49U)
- - run `npm run build`, move all files from `~/Ch-058/front-end/dist` to `~/Ch-058/src/main/webapp`
- - in [`~/Ch-058/src/main/webapp/index.html`](https://git.io/vAR9l) put dots (ha-ha) on lines
-    * after [`<link href=`](https://git.io/vARrw) 
-    * after [`<script type=text/javascript src=`](https://git.io/vARr5)          
-- then repeat 3rd step of `build and deploy`  
-
-### diagram as code 1
-![diagram_as_code_1](diagram_as_code_1.png)
-### diagram as code 2
-![diagram_as_code_2](diagram_as_code_2.png)
-# 
-    
-[swagger](http://localhost:8080/citizen/swagger-ui.html)
-
-[heroku](https://geocitizen.herokuapp.com)  
-
 # Geocitizen
+
+2) [ubuntu20.04](Ubuntu 20.04)
+2) [centos7](CentOS 7)
+2) [Manual deploy Geocitizen](Manual deploy Geocitizen)
+2) [Diagram as code](Diagram as code)
+
+## Manual deploy Geocitizen <a name="Manual deploy Geocitizen"></a>
+
+
+1) `git clone git@github.com:DevOpsAcademySS/Geocitizen.git; cd Geocitizen`
+1) in [`pom.xml`](https://git.io/JuGgS) file change port from `http` to `https` in [`this`](https://git.io/JuGgS) line
+1) in config file [`~/Geocitizen/src/main/resources/application.properties`](https://git.io/JuGlO)
+	Edit following properties
+	 * [`front.url`](https://git.io/JuGWH) - front url
+	 * [`db.url`](https://git.io/JuGWA) - db uri (__db must be created manually__)
+1) replace url with tomcat's url (e.g. `'http://51.138.200.208:8080/citizen'`) in [`~/Geocitizen/front-end/src/main.js`](https://git.io/JuGlP)
+1) `mvn install && mv target/citizen.war /usr/share/tomcat9/webapps/ && /usr/share/tomcat9/bin/startup.sh`
+1) e.g. <http://51.138.200.208:8080/citizen/>
+
+
+## Ubuntu 20.04 <a name="Ubuntu 20.04"></a>
+
+
+Install PostgreSQL, create database 'ss_demo_1', add password, garint all privileges on database
+
+edit following files:
+    
+in `/etc/postgresql/12/main/pg_hba.conf` write `host all all 192.168.1.7/24 md5`
+
+in `/etc/postgresql/12/main/postgresql.conf ` replace `listen_addresses='localhost'` with `listen_addresses='*'`
+
+## CentOS 7 <a name="CentOS 7"></a>
+
+
+Install OpenJDK, create Tomcat system user, download and configure Tomcat
+
+## Diagram as code <a name="Diagram as code"></a>
+
+
+### diagram 1
+![diagram_as_code_1](diagram_as_code_1.png)
+### diagram  2
+![diagram_as_code_2](diagram_as_code_2.png)
+#
+    
+[Geocitizen](http://51.138.200.208:8080/citizen/swagger-ui.html)
+
