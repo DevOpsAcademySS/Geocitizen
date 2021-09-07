@@ -44,5 +44,5 @@ Diagram  2 :
 ![diagram_as_code_2](diagram_as_code_2.png)
 #
     
-[Geocitizen](http://51.138.200.208:8080/citizen/swagger-ui.html)
+[swagger](http://51.138.200.208:8080/citizen/swagger-ui.html)
 
