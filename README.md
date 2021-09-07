@@ -1,9 +1,9 @@
 # Geocitizen
 
-2) [ubuntu20.04](Ubuntu 20.04)
-2) [centos7](CentOS 7)
-2) [Manual deploy Geocitizen](Manual deploy Geocitizen)
-2) [Diagram as code](Diagram as code)
+2) [ubuntu20.04](#Ubuntu 20.04)
+2) [centos7](#CentOS 7)
+2) [Manual deploy Geocitizen](#Manual deploy Geocitizen)
+2) [Diagram as code](#Diagram as code)
 
 ## Manual deploy Geocitizen <a name="Manual deploy Geocitizen"></a>
 
