@@ -1,11 +1,11 @@
 # Geocitizen
 
-1. [ubuntu20.04](#Ubuntu 20.04)
-2. [centos7](#CentOS 7)
-3. [Manual deploy Geocitizen](#Manual deploy Geocitizen)
-4. [Diagram as code](#Diagram as code)
+1. [Manual deploy Geocitizen](#manual_deploy_geocitizen)
+2. [ubuntu20.04](#ubuntu20.04)
+3. [centos7](#centos7)
+4. [Diagram as code](#diagram_as_code)
 
-## Manual deploy Geocitizen <a name="Manual deploy Geocitizen"></a>
+## Manual deploy Geocitizen <a name="manual_deploy_geocitizen"></a>
 
 
 1) `git clone git@github.com:DevOpsAcademySS/Geocitizen.git; cd Geocitizen`
@@ -19,7 +19,7 @@
 1) e.g. <http://51.138.200.208:8080/citizen/>
 
 
-## Ubuntu 20.04 <a name="Ubuntu 20.04"></a>
+## Ubuntu 20.04 <a name="ubuntu20.04"></a>
 
 
 Install PostgreSQL, create database 'ss_demo_1', add password, garint all privileges on database
@@ -30,17 +30,17 @@ in `/etc/postgresql/12/main/pg_hba.conf` write `host all all 192.168.1.7/24 md5`
 
 in `/etc/postgresql/12/main/postgresql.conf ` replace `listen_addresses='localhost'` with `listen_addresses='*'`
 
-## CentOS 7 <a name="CentOS 7"></a>
+## CentOS 7 <a name="centos7"></a>
 
 
 Install OpenJDK, create Tomcat system user, download and configure Tomcat
 
-## Diagram as code <a name="Diagram as code"></a>
+## Diagram as code <a name="diagram_as_code"></a>
 
 
-### diagram 1
+Diagram 1 :
 ![diagram_as_code_1](diagram_as_code_1.png)
-### diagram  2
+Diagram  2 :
 ![diagram_as_code_2](diagram_as_code_2.png)
 #
     
