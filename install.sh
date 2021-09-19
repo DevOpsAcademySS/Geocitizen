@@ -8,7 +8,7 @@ cd ./front-end
 sed -i -E '/vue-(mat|rou)/s/\^//g' package.json
 npm install
 npm audit fix
-npm run build --no-color
+npm run build --no-progress --no-color | sed "s,\x1B\[[0-9;]*[a-zA-Z],,g"
 cp -r ./dist/* ../src/main/webapp/
 cd ..
 sed -i -E '/\/static/s/=\/static/=.\/static/g' src/main/webapp/index.html
