@@ -1,0 +1,13 @@
+- name: Playbook to copy citizen.war to tomcat server and restart tomcat.
+  hosts: amazon_linux
+  become: yes
+  tasks:
+    - name: copy citizen.war
+      copy:
+        src: ./target/citizen.war
+        dest: /opt/tomcat/webapps/
+    - name: reload tomcat
+      service:
+        name: tomcat
+        state: restarted
+  
