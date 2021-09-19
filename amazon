@@ -1,0 +1,2 @@
+[amazon_linux]
+amazon	ansible_host=2.2.2.2	ansible_user=ec2-user
