@@ -12,4 +12,5 @@ npm run build
 cp -r ./dist/* ../src/main/webapp/
 cd ..
 sed -i -E '/\/static/s/=\/static/=.\/static/g' src/main/webapp/index.html
+sed -i -E '/repo.spring.io\/milestone/s/http/https/g' pom.xml
 mvn install
