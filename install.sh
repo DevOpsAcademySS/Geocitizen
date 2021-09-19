@@ -13,9 +13,3 @@ cp -r ./dist/* ../src/main/webapp/
 cd ..
 sed -i -E '/\/static/s/=\/static/=.\/static/g' src/main/webapp/index.html
 mvn install
-webappspath=$(sudo find / -type d -name "webapps")
-sudo mv target/citizen.war $webappspath
-sudo systemctl restart tomcat*
-
-echo "Geocitizen is ready: http://$tomcatip:8080/citizen"
-echo "Enjoy!"
