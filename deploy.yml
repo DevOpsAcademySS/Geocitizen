@@ -10,4 +10,6 @@
       service:
         name: tomcat
         state: restarted
-  
+    - name: NOW YOU CAN USE GEOCITIZEN
+      debug:
+        msg: "http://{{ ansible_ssh_host }}:8080//citizen" 
