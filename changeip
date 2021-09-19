@@ -1,8 +1,0 @@
-#!/bin/bash
-interface=$(ip a | awk -F: '$0 !~ "lo|vir|wl|^[^0-9]"{print $2a;getline}')
-echo "interface =$interface"
-
-tomcatip=$(ip a s $interface | awk -F"[/ ]+" '/inet / {print $3}')
-echo "ip of interface:$interface = $tomcatip"
-
-grep -RiIl 'localhost' * | grep -v "$0" | xargs -i@ sed -i 's/localhost/'$tomcatip'/g' @
