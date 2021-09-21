@@ -6,6 +6,11 @@ GEO_PATH=$3
 IP_REGEXP="[0-9]\{1,3\}.[0-9]\{1,3\}.[0-9]\{1,3\}.[0-9]\{1,3\}"
 REGEXP="^[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}$"
 
+if [[ "$GEO_PATH" == "" ]];
+then
+GEO_PATH=`pwd`
+fi
+
 if  [[ ! "$DB_IP" =~ $REGEXP || ! "$WEB_IP" =~ $REGEXP || ! -d "$GEO_PATH" ]]; # check if IP and PATH valid
 then
     printf "Set the Servers IPs(0.0.0.0) with Path (/f/papku/SoftServe\ IT\ Academy/Geocitizen) to Geocitizen:"
