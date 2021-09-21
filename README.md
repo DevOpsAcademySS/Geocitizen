@@ -17,7 +17,7 @@ _Build and deploy (ubuntu20.04, centos7, git, java8, maven3, tomcat9)._
 
 ---
 
-### Configuration of Ubuntu 20.04 Server: <a name="cus"></a>
+## Configuration of Ubuntu 20.04 Server: <a name="cus"></a>
 
 > *Sourses:* 
 > 1. [How To Install and Use PostgreSQL on Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-18-04)
@@ -29,7 +29,7 @@ _Build and deploy (ubuntu20.04, centos7, git, java8, maven3, tomcat9)._
 sudo apt update -y
 ```
 
-#### PostgreSQL <a name='postgresql'></a>
+### PostgreSQL <a name='postgresql'></a>
 
 ---
 
@@ -104,14 +104,14 @@ sudo /etc/init.d/iptables restart
 
 ---
 
-### Configuration of CentOS 7 Core: <a name="ccc"></a>
+## Configuration of CentOS 7 Core: <a name="ccc"></a>
 
 > *Sourses:* 
 > 1. [Install Java 8 on CentOS 7](https://www.liquidweb.com/kb/install-java-8-on-centos-7/)
 > 2. [How to install Apache Maven on CentOS 7](https://baks.dev/article/centos/how-to-install-apache-maven-on-centos-7)
 > 3. [How to Install Tomcat 9 on CentOS 7](https://linuxize.com/post/how-to-install-tomcat-9-on-centos-7/)
 
-#### Git <a name='git'></a>
+### Git <a name='git'></a>
 
 ---
 
@@ -135,7 +135,7 @@ source /etc/profile.d/bash_completion.sh
 git clone https://github.com/DevOpsAcademySS/Geocitizen.git
 ```
 
-#### Java <a name='java'></a>
+### Java <a name='java'></a>
 
 ---
 
@@ -175,7 +175,7 @@ source .bash_profile
 sudo yum install wget -y
 ```
 
-#### Maven <a name='maven'></a>
+### Maven <a name='maven'></a>
 
 ---
 
@@ -230,7 +230,7 @@ source /etc/profile.d/maven.sh
 mvn -version
 ```
 
-#### Tomcat <a name='tomcat'></a>
+### Tomcat <a name='tomcat'></a>
 
 ---
 
@@ -390,7 +390,7 @@ The list of allowed IP addresses is a list separated with vertical bar |. You ca
 sudo systemctl restart tomcat
 ```
 
-#### Node.js <a name='nodejs'></a>
+### Node.js <a name='nodejs'></a>
 
 ---
 
@@ -400,7 +400,7 @@ sudo systemctl restart tomcat
 sudo yum install nodejs -y
 ```
 
-#### Manual deploy Geocitizen <a name='geo'></a>
+### Manual deploy Geocitizen <a name='geo'></a>
 
 ---
 
