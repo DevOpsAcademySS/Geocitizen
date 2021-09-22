@@ -19,7 +19,7 @@
     "axios": "^0.17.1",
     "bootstrap-social": "^5.1.1",
     "debounce": "^1.1.0",
-    "node-sass": "4.7.2",
+    "node-sass": "^4.7.2",
     "node-waves": "^0.7.5",
     "sass-loader": "^6.0.6",
     "stompjs": "^2.3.3",
