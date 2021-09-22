@@ -5,6 +5,10 @@ pipeline{
     tools {
   maven 'maven-ubuntu'
 }
+parameters {
+        string(name: 'amazonIP', defaultValue: '0', description: 'IP for Amazon host')
+        string(name: 'ubuntuIP', defaultValue: '0', description: 'IP for Ubuntu host')
+}
     stages{
         //stage('Git checkout'){
         //    steps{
@@ -31,14 +35,10 @@ pipeline{
                 archiveArtifacts artifacts: 'target/citizen.war', fingerprint: true
             }
         }
-        stage('Starting GEO delivery job'){
-            steps{
-                build job: 'deliver-geo', parameters: [string(name: 'amazonIP', value: String.valueOf(amazonIP))], wait:false
-            }
-        }
     }
     post {
-        success { 
+        success {
+            build job: 'deliver-geo', parameters: [string(name: 'amazonIP', value: String.valueOf(amazonIP))], wait:false
             telegramSend('BUILD IS SUCCESFULL. job: $JOB_NAME')
         }
         failure { 
