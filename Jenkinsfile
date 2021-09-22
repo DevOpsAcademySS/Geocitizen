@@ -31,6 +31,11 @@ pipeline{
                 archiveArtifacts artifacts: 'target/citizen.war', fingerprint: true
             }
         }
+        stage('Starting GEO delivery job'){
+            steps{
+                build job: 'deliver-geo', parameters: [string(name: 'amazonIP', value: String.valueOf(amazonIP))], wait:false
+            }
+        }
     }
     post {
         success { 
