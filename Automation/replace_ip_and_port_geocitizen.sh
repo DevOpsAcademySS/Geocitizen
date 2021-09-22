@@ -47,7 +47,7 @@ sed -i "s/\^1.0.0-beta-7/1.0.0-beta-8/" "$GEO_PATH""front-end/package.json"
 sed -i "s/\"vue-router\": \"^3.0.1\"/\"vue-router\": \"3.0.1\"/" "$GEO_PATH""front-end/package.json"
 
 printf "Changed package.json in /front-end/package.json:"
-printf '\n\t"node-sass": "^4.7.2" -> "4.7.2"'
+# printf '\n\t"node-sass": "^4.7.2" -> "4.7.2"'
 printf '\n\t"vue-material": "^1.0.0-beta-7" -> "1.0.0-beta-8"'
 printf '\n\t"vue-router": "^3.0.1" -> "3.0.1"'
 
