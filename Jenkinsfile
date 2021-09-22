@@ -26,6 +26,11 @@ pipeline{
                 """
             }
         }
+         stage('archive'){
+            steps{
+                archive 'target/citizen.war'
+            }
+        }
     }
     post {
         success { 
