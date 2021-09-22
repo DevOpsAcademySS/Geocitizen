@@ -51,9 +51,9 @@ echo -e "Done\n"
 
 
 # copy citizen.war from /target to /opt/latest/webapps/
-printf "Copy citizen.war from /target/ to /opt/tomcat/latest/webapps/"
-sudo cp "$GEO_PATH""target/citizen.war" "/opt/tomcat/latest/webapps/"
-echo -e "\nDone\n"
+# printf "Copy citizen.war from /target/ to /opt/tomcat/latest/webapps/"
+# sudo cp "$GEO_PATH""target/citizen.war" "/opt/tomcat/latest/webapps/"
+# echo -e "\nDone\n"
 
 
 cd "$CUR_DIR"
