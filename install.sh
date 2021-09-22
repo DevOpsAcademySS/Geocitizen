@@ -1,6 +1,6 @@
 #!/bin/bash
-tomcatip=$(cat $HOME/.cache/amazon_ip | tr -d '"')
-DBip=$(cat $HOME/.cache/ubuntu_ip | tr -d '"')
+tomcatip=$(cat amazon_ip)
+DBip=$(cat ubuntu_ip)
 sed -i -E '/(front.*|back.*)[Uu]rl/s/p:.*:/p:\/\/'$tomcatip':/g' ./src/main/resources/application.properties ./front-end/src/main.js
 #read -r -p "enter database IP: " DBip
 sed -i -E '/db.url/s/l:.*\/ss/l:\/\/'$DBip':5432\/ss/g' ./src/main/resources/application.properties
