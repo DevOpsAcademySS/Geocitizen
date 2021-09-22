@@ -28,7 +28,7 @@ pipeline{
         }
          stage('archive'){
             steps{
-                archive 'target/citizen.war'
+                archiveArtifacts artifacts: 'target/citizen.war', fingerprint: true
             }
         }
     }
