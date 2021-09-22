@@ -42,7 +42,7 @@ sed -i "s/db.url=jdbc:postgresql:\/\/$IP_REGEXP/db.url=jdbc:postgresql:\/\/$DB_I
 echo "Changed IP in /src/main/resources/application.properties to $DB_IP for DATABASE"
 
 # replace dependencies in /front-end/package.json
-sed -i "s/\^4.7.2/4.7.2/" "$GEO_PATH""front-end/package.json"
+# sed -i "s/\^4.7.2/4.7.2/" "$GEO_PATH""front-end/package.json"
 sed -i "s/\^1.0.0-beta-7/1.0.0-beta-8/" "$GEO_PATH""front-end/package.json"
 sed -i "s/\"vue-router\": \"^3.0.1\"/\"vue-router\": \"3.0.1\"/" "$GEO_PATH""front-end/package.json"
 
