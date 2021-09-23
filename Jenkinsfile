@@ -4,12 +4,18 @@ pipeline{
         maven 'maven'
     }
     stages{
-         stage('BUILD'){
+        stage('SET IPs'){
             steps{
                 sh """
-                echo $JAVA_HOME
-                mvn --version
-                mvn install
+                echo $amazonIP > amazon_ip
+                echo $ubuntuIP > ubuntu_ip
+                """
+            }
+        }
+        stage('BUILD'){
+            steps{
+                sh """
+                ./install.sh
                 """
             }
         }
@@ -19,9 +25,9 @@ pipeline{
             }
         }
     }
-    //post {
-        //success {
-        //    build job: 'geo-ansible-job', parameters: [string(name: 'amazonIP', value: String.valueOf(amazonIP)), string(name: 'ubuntuIP', value: String.valueOf(ubuntuIP))], wait:false
-        //}
-    //}
+    post {
+        success {
+            build job: 'geo-ansible-job', parameters: [string(name: 'amazonIP', value: String.valueOf(amazonIP)), string(name: 'ubuntuIP', value: String.valueOf(ubuntuIP))], wait:false
+        }
+    }
 }
