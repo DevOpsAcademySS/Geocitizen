@@ -15,6 +15,8 @@ pipeline{
          stage('BUILD'){
             steps{
                 sh """
+                echo $JAVA_HOME
+                mvn --version
                 ./install.sh
                 """
             }
