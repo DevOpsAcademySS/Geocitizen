@@ -9,7 +9,7 @@ pipeline{
                 sh """
                 echo $JAVA_HOME
                 mvn --version
-                
+                mvn install
                 """
             }
         }
