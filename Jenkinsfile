@@ -1,8 +1,5 @@
 pipeline{
     agent any
-    tools {
-        maven 'maven'
-    }
     stages{
         stage('SET IPs'){
             steps{
