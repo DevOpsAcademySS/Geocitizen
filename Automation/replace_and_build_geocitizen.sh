@@ -3,6 +3,7 @@
 DB_IP=$1
 WEB_IP=$2
 GEO_PATH=$3
+REGEXP="^[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}$"
 
 if  [[ ! "$DB_IP" =~ $REGEXP || ! "$WEB_IP" =~ $REGEXP || ! -d "$GEO_PATH" ]]; # check if IP and PATH valid
 then
