@@ -1,9 +1,9 @@
 #!/bin/sh
 
 printf "Copy all from /front-end/dist to /src/main/webapp/"
-rm "./src/main/webapp/index.html"
-rm -r "./src/main/webapp/static"
-rsync -a "./front-end/dist/" "./src/main/webapp/"
+# rm "./src/main/webapp/index.html"
+# rm -r "./src/main/webapp/static"
+cp -r "./front-end/dist/." "./src/main/webapp/"
 
 echo "Editing index.html in /src/main/webapp/"
 # edit index.html in /src/main/webapp/ (/src/assets -> ./static/)
