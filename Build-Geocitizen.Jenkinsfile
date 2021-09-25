@@ -13,18 +13,13 @@ pipeline{
             steps{
                 echo "DB_IP: ${params.DB_IP}"
                 echo "WEB_IP: ${params.WEB_IP}"
-                bat ".\\Automation\\replace_ip_and_port_geocitizen.sh ${params.DB_IP} ${params.WEB_IP} .\\"
+                bat ".\\Automation\\replace_ip_and_port_geocitizen.sh ${params.DB_IP} ${params.WEB_IP}"
             }
         }
         stage('Build Geocitizen'){
             steps{
                 nodejs('Nodejs-12-22-6'){
-                    dir('.\\front-end\\'){
-                        bat "npm install"
-                        bat "npm audit fix"
-                        bat "npm run build"
-                    }
-                    bat ".\\Automation\\edit_index.sh"
+                    bat ".\\Automation\\build_copy_edit.sh"
                     bat "mvn install"
                 }
             }

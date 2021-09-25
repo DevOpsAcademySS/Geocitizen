@@ -66,7 +66,7 @@ then
     # doing maven install
     echo "Doing mvn install in $GEO_PATH"
     cd "$GEO_PATH"
-    sudo mvn install
+    mvn install
     echo -e "Done\n"
 fi
 
