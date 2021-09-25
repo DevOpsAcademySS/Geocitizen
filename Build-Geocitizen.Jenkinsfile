@@ -20,7 +20,6 @@ pipeline{
             steps{
                 nodejs('Nodejs-12-22-6'){
                     bat ".\\Automation\\build_copy_edit.sh"
-                    bat "mvn install"
                 }
             }
         }

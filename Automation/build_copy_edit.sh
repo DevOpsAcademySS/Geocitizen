@@ -11,5 +11,6 @@ sed -i "s/[.]*\?\/static\/css/.\/static\/css/" "./src/main/webapp/index.html"
 sed -i "s/[.]*\?\/static\/js/.\/static\/js/g" "./src/main/webapp/index.html"
 sed -i "s/[.]*\?\/static\/js/.\/static\/js/g" "./src/main/webapp/index.html"
 sed -i "s/[.]*\?\/static\/js/.\/static\/js/g" "./src/main/webapp/index.html"
+mvn install
 
 exit 1
