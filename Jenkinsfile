@@ -8,18 +8,31 @@ parameters {
         string(name: 'ubuntuIP', defaultValue: '0', description: 'IP for Ubuntu host')
 }
     stages{
-        stage('SET IPs'){
+         stage('REPLACE'){
             steps{
                 sh """
-                echo $amazonIP > amazon_ip
-                echo $ubuntuIP > ubuntu_ip
+                sed -i -E '\\@(front.*|back.*)[Uu]rl@s@p:.*:@p://$amazonIP:@g' ./src/main/resources/application.properties ./front-end/src/main.js
+                sed -i -E '\\|db.url|s|l:.*/ss|l://$ubuntuIP:5432/ss|g' ./src/main/resources/application.properties
+                sed -i -E '\\@vue-(mat|rou)@s@\\^@@g' ./front-end/package.json
+                sed -i -E '\\|repo.spring.io/milestone|s|http|https|g' pom.xml
                 """
             }
         }
-         stage('BUILD'){
+        stage('Front-end BUILD'){
+            steps{
+                nodejs('NodeJS12'){
+                sh """
+                (cd ./front-end && npm install && npm audit fix && npm run build --no-progress --no-color | sed "s,\\x1B\\[[0-9;]*[a-zA-Z],,g")
+                """
+                }
+            }
+        }
+        stage('Back-end BUILD'){
             steps{
                 sh """
-                ./install.sh
+                cp -r ./front-end/dist/* ./src/main/webapp/
+                sed -i -E '\\|/static|s|=/static|=./static|g' ./src/main/webapp/index.html
+                mvn install
                 """
             }
         }
