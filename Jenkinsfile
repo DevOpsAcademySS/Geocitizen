@@ -13,7 +13,6 @@ parameters {
                 sh """
                 sed -i -E '\\@(front.*|back.*)[Uu]rl@s@p:.*:@p://$amazonIP:@g' ./src/main/resources/application.properties ./front-end/src/main.js
                 sed -i -E '\\|db.url|s|l:.*/ss|l://$ubuntuIP:5432/ss|g' ./src/main/resources/application.properties
-                sed -i -E 's|ss_demo_1|postgres|g' ./src/main/resources/application.properties
                 sed -i -E '\\@vue-(mat|rou)@s@\\^@@g' ./front-end/package.json
                 sed -i -E '\\|repo.spring.io/milestone|s|http|https|g' pom.xml
                 """
@@ -54,3 +53,4 @@ parameters {
         }
     }
 }
+//   sed -i -E 's|ss_demo_1|postgres|g' ./src/main/resources/application.properties sed command to change database name
