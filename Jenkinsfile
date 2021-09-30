@@ -36,15 +36,16 @@ parameters {
                 """
             }
         }
-         stage('archive'){
+         stage('nexus publish'){
             steps{
-                archiveArtifacts artifacts: 'target/citizen.war', fingerprint: true
+                createTag nexusInstanceId: 'nexus3', tagName: 'build-$BUILD_NUMBER'
+                nexusPublisher nexusInstanceId: 'nexus3', nexusRepositoryId: 'geocitizen', packages: [[$class: 'MavenPackage', mavenAssetList: [[classifier: '', extension: '', filePath: 'target/citizen.war']], mavenCoordinate: [artifactId: 'geo-citizen', groupId: 'com.softserveinc', packaging: 'war', version: '1.0.5']]], tagName: 'build-$BUILD_NUMBER'
             }
         }
     }
     post {
         success {
-            build job: 'deliver-geo', parameters: [string(name: 'amazonIP', value: String.valueOf(amazonIP))], wait:false
+          //  build job: 'deliver-geo', parameters: [string(name: 'amazonIP', value: String.valueOf(amazonIP))], wait:false
             telegramSend('BUILD IS SUCCESFULL. job: $JOB_NAME')
         }
         failure { 
