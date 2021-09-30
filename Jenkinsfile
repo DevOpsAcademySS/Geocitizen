@@ -40,7 +40,7 @@ parameters {
          stage('nexus publish'){
             steps{
                 //createTag nexusInstanceId: 'nexus3', tagName: 'build-$BUILD_NUMBER'
-                nexusPublisher nexusInstanceId: 'nexus3', nexusRepositoryId: 'geocitizen', packages: [[$class: 'MavenPackage', mavenAssetList: [[classifier: '', extension: '', filePath: 'target/citizen.war']], mavenCoordinate: [artifactId: 'geo-citizen', groupId: 'com.softserveinc', packaging: 'war', version: '1.0.5']]]//, tagName: 'build-$BUILD_NUMBER'
+                nexusPublisher nexusInstanceId: 'nexus3', nexusRepositoryId: 'geocitizen', packages: [[$class: 'MavenPackage', mavenAssetList: [[classifier: '', extension: '', filePath: 'target/citizen.war']], mavenCoordinate: [artifactId: 'geo-citizen', groupId: 'com.softserveinc', packaging: 'war', version: '1.0.5-1']]]//, tagName: 'build-$BUILD_NUMBER'
             }
         }
     }
