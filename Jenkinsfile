@@ -38,9 +38,9 @@ parameters {
         }
          stage('nexus publish'){
             steps{
-                deploy adapters: [tomcat9(credentialsId: 'tomcat-cred', path: '', url: 'http://13.53.200.184:8080')], contextPath: 'citizen', war: 'target/*.war'
+                //deploy adapters: [tomcat9(credentialsId: 'tomcat-cred', path: '', url: 'http://13.53.200.184:8080')], contextPath: 'citizen', war: 'target/*.war'
                 //createTag nexusInstanceId: 'nexus3', tagName: 'build-$BUILD_NUMBER'
-               // nexusPublisher nexusInstanceId: 'nexus3', nexusRepositoryId: 'geocitizen', packages: [[$class: 'MavenPackage', mavenAssetList: [[classifier: '', extension: '', filePath: 'target/citizen.war']], mavenCoordinate: [artifactId: 'geo-citizen', groupId: 'com.softserveinc', packaging: 'war', version: '1.0.5-$BUILD_NUMBER']]]//, tagName: 'build-$BUILD_NUMBER'
+               nexusPublisher nexusInstanceId: 'nexus3', nexusRepositoryId: 'geocitizen', packages: [[$class: 'MavenPackage', mavenAssetList: [[classifier: '', extension: '', filePath: 'target/citizen.war']], mavenCoordinate: [artifactId: 'geo-citizen', groupId: 'com.softserveinc', packaging: 'war', version: '1.0.5-$BUILD_NUMBER']]]//, tagName: 'build-$BUILD_NUMBER'
             }
         }
     }
