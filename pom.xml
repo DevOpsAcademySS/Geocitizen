@@ -17,7 +17,7 @@
     <modelVersion>4.0.0</modelVersion>
 	<groupId>com.softserveinc</groupId>
 	<artifactId>geo-citizen</artifactId>
-	<version>1.0.5-SNAPSHOT</version>
+	<version>1.0.5</version>
     <packaging>war</packaging>
 
 	<name>Geo Citizen</name>
